@@ -1,0 +1,127 @@
+.hb-file-input {
+  display: none;
+}
+
+.hb-preset {
+  width: 44px;
+  height: 28px;
+  border: 2px solid transparent;
+  border-radius: var(--hope-radii-lg);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.hb-preset:hover {
+  transform: translateY(-1px);
+}
+
+.hb-preset:focus-visible,
+.hb-preset--active {
+  border-color: var(--hope-colors-accent9);
+}
+
+.hb-preview {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--hope-colors-neutral6);
+  border-radius: var(--hope-radii-lg);
+  background-color: var(--hope-colors-background);
+}
+
+.hb-preview__image {
+  position: absolute;
+  inset: -8px;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hb-preview__mask {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(247, 248, 250, var(--hb-preview-mask));
+}
+
+.hope-ui-dark .hb-preview__mask {
+  background-color: rgba(15, 15, 15, var(--hb-preview-mask));
+}
+
+.hb-preview__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #2f3542;
+}
+
+.hope-ui-dark .hb-preview__content {
+  color: #e9edf2;
+}
+
+.hb-preview__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.52);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.hope-ui-dark .hb-preview__header {
+  background-color: rgba(15, 15, 15, 0.5);
+}
+
+.hb-preview__logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1890ff, #70c6be);
+}
+
+.hb-preview__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  font-size: 12px;
+}
+
+.hb-preview__crumb {
+  margin-bottom: 4px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.hb-preview__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.42);
+}
+
+.hope-ui-dark .hb-preview__row {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.hb-preview__icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: var(--hope-colors-accent9);
+  opacity: 0.85;
+}

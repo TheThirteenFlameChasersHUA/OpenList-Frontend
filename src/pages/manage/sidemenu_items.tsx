@@ -14,6 +14,7 @@ import {
   BsBucket,
   BsHddNetwork,
   BsArrowLeftRight,
+  BsImage,
 } from "solid-icons/bs"
 import { FiLogIn } from "solid-icons/fi"
 import { SiMetabase } from "solid-icons/si"
@@ -60,6 +61,12 @@ export const side_menu_items: SideMenuItem[] = [
         icon: BsPaletteFill,
         to: "/@manage/settings/style",
         component: () => <CommonSettings group={Group.STYLE} />,
+      },
+      {
+        title: "manage.sidemenu.background",
+        icon: BsImage,
+        to: "/@manage/settings/background",
+        component: lazy(() => import("./settings/Background")),
       },
       {
         title: "manage.sidemenu.preview",

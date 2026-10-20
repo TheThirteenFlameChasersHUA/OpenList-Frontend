@@ -1,4 +1,5 @@
 import { Markdown } from "~/components"
+import { HomeBackground } from "~/components/home-background"
 import { useTitle } from "~/hooks"
 import { getSetting } from "~/store"
 import { notify } from "~/utils"
@@ -14,12 +15,12 @@ const Index = () => {
     notify.render(<Markdown children={announcement} />)
   }
   return (
-    <>
+    <HomeBackground>
       <Header />
       <Toolbar />
       <Body />
       <Footer />
-    </>
+    </HomeBackground>
   )
 }
 
